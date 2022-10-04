@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <header>
+    <h1 class="title">Expense Tracker</h1>
+  </header>
+
+  <section id="new-expense" class="flex">
+    <h1 class="section-title">Add a new item:</h1>
+
+    <form id="expense-input" class="flex">
+      
+     <div class="form-group">
+          <label for="expense-name" class="form-label">Name:</label>
+          <input type="text" class="item-input"
+          id="expense-name" placeholder="Enter expense name...">
+      </div>
+
+      <div class="form-group">
+          <label for="expense-date" class="form-label">Date:</label>
+          <input type="date" class="item-input" id="expense-date">
+        </div>
+
+        <div class="form-group">
+          <label for="expense-amt" class="form-label">Amount:</label>
+          <input type="number" min="1" step=".01" class="item-input" id="expense-amt" placeholder="Enter expense amount...">
+        </div>   
+
+      <div class="form-group" id="btn-group">
+        <button type="submit" class="btn">Add Expense</button>
+        <button type="button" class="btn clear-btn">Clear Expenses</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="expense-tracker">
+    <table id="expense-table">
+      <thead>
+        <tr>
+          <th class="name">Name</th>
+          <th class="date">Date</th>
+          <th class="amount">Amount</th>
+          <th class="delete">Delete?</th>
+        </tr>
+      </thead>
+      <tbody id="expense-list">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
